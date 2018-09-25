@@ -3,8 +3,7 @@ from flask_restful import Api, Resource
 import os, random, string
 
 app = Flask(__name__)
-n = 5
-app.secret_key = ''.join([random.choice(string.ascii_letters + string.digits) for i in range(n)])
+app.secret_key = ''.join([random.choice(string.ascii_letters + string.digits) for i in range(10)])
 api_bp = Blueprint('api', "flask-restful with blueprint", url_prefix="/api",)
 api = Api(api_bp)
 
